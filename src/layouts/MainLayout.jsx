@@ -1,17 +1,21 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core';
+import Header from '../components/Header';
+import ThemeContext from '../context/ThemeContext';
+import Main from '../components/Main';
+import {useState} from 'react';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    color: 'red'
-  }
-}));
 
 const MainLayout = () => {
-  const classes = useStyles();
+
+  const themeHook = useState('light');
 
   return (
-    <h1>here</h1>
+    <ThemeContext.Provider value={themeHook}>
+      <React.Fragment>
+        <Header/>
+        <Main/>
+      </React.Fragment>
+    </ThemeContext.Provider>
   );
 };
 
