@@ -1,4 +1,4 @@
-const AppTheme ={
+const AppTheme = {
   light: {
     color: '#000',
     backgroundColor: '#fff'

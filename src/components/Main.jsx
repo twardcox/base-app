@@ -1,11 +1,11 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import ThemeContext from '../context/ThemeContext';
 import AppTheme from '../theme/appTheme';
 
 const Main = () => {
   const theme = useContext(ThemeContext)[0];
   const currentTheme = AppTheme[theme];
-  return(
+  return (
     <main style={{
       padding: '1rem',
       backgroundColor: `${currentTheme.backgroundColor}`,

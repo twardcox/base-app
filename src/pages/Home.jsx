@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles, Grid, Typography} from '@material-ui/core';
+import { makeStyles, Grid, Typography } from '@material-ui/core';
 
 
 
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.light,
   }
 })
-)
+);
 
 const Home = () => {
   const classes = useStyles();
@@ -22,7 +22,7 @@ const Home = () => {
         </Typography>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
 
 export default Home;

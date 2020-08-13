@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import ThemeContext from '../context/ThemeContext';
 import Main from '../components/Main';
-import {useState} from 'react';
+import { useState } from 'react';
 
 
 const MainLayout = () => {
@@ -12,8 +12,8 @@ const MainLayout = () => {
   return (
     <ThemeContext.Provider value={themeHook}>
       <React.Fragment>
-        <Header/>
-        <Main/>
+        <Header />
+        <Main />
       </React.Fragment>
     </ThemeContext.Provider>
   );

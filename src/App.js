@@ -1,7 +1,7 @@
-import React, {useContext} from 'react';
-import {CssBaseline} from '@material-ui/core';
-import {BrowserRouter as Router, Switch} from 'react-router-dom';
-import Routes from './Routes';
+import React, { useContext } from 'react';
+import { CssBaseline } from '@material-ui/core';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import Routes from './routes/DashboardRoutes';
 import ThemeContext from './context/ThemeContext';
 
 function App() {
@@ -9,14 +9,14 @@ function App() {
 
   return (
     <div >
-      <CssBaseline/>
+      <CssBaseline />
       <ThemeContext.Provider value={theme}>
         <Router>
           <Switch>
             <Routes
             // childProps={childProps}
             />
-          
+
           </Switch>
         </Router>
       </ThemeContext.Provider>

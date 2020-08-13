@@ -1,19 +1,19 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
-import Login from './containers/Login';
-import MainLayout from './layouts/MainLayout';
-import EmptyLayout from './layouts/EmptyLayout';
-import ErrorPage from './containers/Error';
+import { Route, Switch } from 'react-router-dom';
+import Login from '../containers/Login';
+import MainLayout from '../layouts/MainLayout';
+import EmptyLayout from '../layouts/EmptyLayout';
+import ErrorPage from '../containers/Error';
 import PropTypes from 'prop-types';
-import About from './pages/About';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
+import About from '../pages/About';
+import Home from '../pages/Home';
+import Contact from '../pages/Contact';
 
 const NotFound = () => {
   return <div>NotFound</div>;
 };
 
-const DashboardRoute = ({component: C, props: cProps, ...rest}) => {
+const DashboardRoute = ({ component: C, props: cProps, ...rest }) => {
 
   return (<Route
     {...rest}
@@ -26,7 +26,7 @@ const DashboardRoute = ({component: C, props: cProps, ...rest}) => {
   );
 };
 
-const EmptyRoute = ({component: Component, ...rest}) => {
+const EmptyRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
@@ -39,9 +39,9 @@ const EmptyRoute = ({component: Component, ...rest}) => {
   );
 };
 
-const Routes = ({childProps}) => (
+const Routes = ({ childProps }) => (
   <Switch>
-    <DashboardRoute exact path='/' component={Home} props={childProps}/>
+    <DashboardRoute exact path='/' component={Home} props={childProps} />
     <DashboardRoute
       path='/dashboard'
       component={Home}

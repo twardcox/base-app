@@ -8,7 +8,7 @@ const headerStyles = {
   alignItems: 'center'
 };
 const Header = () => {
-  return(
+  return (
     <header style={headerStyles}>
       <h1>Context API</h1>
       <ThemeToggler />
